@@ -40,13 +40,13 @@ body, html {
 
 /* gradient polygons scaling logic */
 
-#TFH_logo:hover ~ #TFH_gradient {
+#TFH_logo_anchor:hover ~ #TFH_gradient {
 	width: 85%;
 	clip-path: polygon(0px 0px, 100% 0px, 34% 100%, 0% 100%);
 	transition-duration: 1s;
 }
 
-#TFH_logo:hover ~ #skullgirls_gradient {
+#TFH_logo_anchor:hover ~ #skullgirls_gradient {
 	clip-path: polygon(85% 0, 100% 0, 100% 100%, 10% 100%);
 	transition-duration: 1s;
 }
@@ -129,10 +129,77 @@ p {
 	color: #117fb0;
 }
 
-a {
-	text-decoration: none;
-}
-
 .fa-heart {
 	color: red;
+}
+
+/* TFH.html stylesheet */
+
+#TFH_body {
+	font-family: Helvetica;
+	font-size: 36px;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: linear-gradient(to right, #888, #ddd 50%, #888 100%)
+}
+
+/* flexbox, transforms, shadows etc. */
+
+.TFH_pictures_left, .TFH_pictures_right {
+	width: 557px;
+	height: 313px;
+}
+
+.TFH_pictures_left {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	transition: 1s;
+}
+
+.TFH_pictures_right {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	transition: 1s;
+}
+
+.TFH_pictures_left:hover, .TFH_pictures_right:hover {
+	transform: translate(15%);
+	transition-duration: 1s;
+}
+
+#flex_container_right {
+	transform: scaleX(-1);
+}
+
+/* custom shadows for each hover */
+
+.Tianhuo {
+	box-shadow: -60px 0 30px 0px rgba(241, 0, 51, 0.6), 50px 0 20px 0px #333;
+}
+
+.Paprika {
+	box-shadow: -60px 0 30px 0px rgba(203, 13, 75, 0.6), 50px 0 20px 0px #333;
+}
+
+.Oleander {
+	box-shadow: -60px 0 30px 0px rgba(123, 1, 118, 0.6), 50px 0 20px 0px #333;
+}
+
+.Velvet {
+	box-shadow: -60px 0 30px 0px rgba(0, 191, 243, 0.6), 50px 0 20px 0px #333;
+}
+
+.Arizona {
+	box-shadow: -60px 0 30px 0px rgba(25, 123, 48, 0.6), 50px 0 20px 0px #333;
+}
+
+.Pom {
+	box-shadow: -60px 0 30px 0px rgba(65, 211, 130, 0.6), 50px 0 20px 0px #333;
 }
