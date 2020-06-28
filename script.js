@@ -14,62 +14,30 @@ let PomName = document.querySelector("#bottom_row_names p:nth-child(2)");
 
 // refactor this as soon as I learn how to do it!
 
-Tianhuo[0].addEventListener("mouseover", function () {
-	TianhuoName.style.opacity = 1;
-	TianhuoName.style.transitionDuration = "1s";
-});
+function opacityOn(name) {
+	name.style.opacity = 1;
+	name.style.transitionDuration = "1s";
+};
 
-Tianhuo[0].addEventListener("mouseout", function () {
-	TianhuoName.style.opacity = 0;
-	TianhuoName.style.transitionDuration = "0.5s";
-});
+function opacityOff(name) {
+	name.style.opacity = 0;
+	name.style.transitionDuration = "0.5s";
+};
 
-Velvet[0].addEventListener("mouseover", function() {
-	VelvetName.style.opacity = 1;
-	VelvetName.style.transitionDuration = "1s";
-});
+Tianhuo[0].addEventListener("mouseover", function(){opacityOn(TianhuoName); });
+Tianhuo[0].addEventListener("mouseout", function(){opacityOff(TianhuoName); });
 
-Velvet[0].addEventListener("mouseout", function () {
-	VelvetName.style.opacity = 0;
-	VelvetName.style.transitionDuration = "0.5s";
-});
+Velvet[0].addEventListener("mouseover", function(){opacityOn(VelvetName); });
+Velvet[0].addEventListener("mouseout", function(){opacityOff(VelvetName); });
 
-Paprika[0].addEventListener("mouseover", function() {
-	PaprikaName.style.opacity = 1;
-	PaprikaName.style.transitionDuration = "1s";
-});
+Paprika[0].addEventListener("mouseover", function(){opacityOn(PaprikaName); });
+Paprika[0].addEventListener("mouseout", function(){opacityOff(PaprikaName); });
 
-Paprika[0].addEventListener("mouseout", function () {
-	PaprikaName.style.opacity = 0;
-	PaprikaName.style.transitionDuration = "0.5s";
-});
+Arizona[0].addEventListener("mouseover", function(){opacityOn(ArizonaName); });
+Arizona[0].addEventListener("mouseout", function(){opacityOff(ArizonaName); });
 
-Arizona[0].addEventListener("mouseover", function() {
-	ArizonaName.style.opacity = 1;
-	ArizonaName.style.transitionDuration = "1s";
-});
+Oleander[0].addEventListener("mouseover", function(){opacityOn(OleanderName); });
+Oleander[0].addEventListener("mouseout", function(){opacityOff(OleanderName); });
 
-Arizona[0].addEventListener("mouseout", function () {
-	ArizonaName.style.opacity = 0;
-	ArizonaName.style.transitionDuration = "0.5s";
-});
-
-Oleander[0].addEventListener("mouseover", function() {
-	OleanderName.style.opacity = 1;
-	OleanderName.style.transitionDuration = "1s";
-});
-
-Oleander[0].addEventListener("mouseout", function () {
-	OleanderName.style.opacity = 0;
-	OleanderName.style.transitionDuration = "0.5s";
-});
-
-Pom[0].addEventListener("mouseover", function() {
-	PomName.style.opacity = 1;
-	PomName.style.transitionDuration = "1s";
-});
-
-Pom[0].addEventListener("mouseout", function () {
-	PomName.style.opacity = 0;
-	PomName.style.transitionDuration = "0.5s";
-});
+Pom[0].addEventListener("mouseover", function(){opacityOn(PomName); });
+Pom[0].addEventListener("mouseout", function(){opacityOff(PomName); });
