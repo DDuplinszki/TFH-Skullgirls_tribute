@@ -145,7 +145,7 @@ p {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	background: linear-gradient(to right, #888, #ddd 50%, #888 100%)
+	background: linear-gradient(to right, #888, #ddd 50%, #888 100%);
 }
 
 /* custom flex order */
@@ -227,7 +227,7 @@ p {
 	justify-content: space-around;
 }
 
-#flex_container_center p{
+#flex_container_center p {
 	opacity: 0;
 }
 
@@ -270,8 +270,6 @@ p {
 #TFH_modal_content {
 	position: relative;
 	z-index: 2;
-	/*background: linear-gradient(to right, #333, #999 50%, #333 100%);*/
-	background: linear-gradient(to right, #222, #fff 80%);
 	height: 80%;
 	width: 80%;
 	margin: 5% auto;
@@ -293,36 +291,53 @@ p {
 
 /* TFH modal pictures */
 
-#modal_pictures_left {
+#modal_pictures_left, #modal_pictures_right {
 	position: absolute;
 	width: 225px;
 	height: 751px;
-	margin: 5% auto auto 75%;
 	z-index: -1;
 }
 
-#modal_pictures_left img {
+#modal_pictures_left {
+	margin: 5% auto auto 75%;
+}
+
+#modal_pictures_right {
+	margin: 5% auto auto 13.5%;
+}
+
+#modal_pictures_left img, #modal_pictures_right img {
 	position: absolute;
 	display: none;
 	height: 751px;
 	animation-name: fade-in;
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
+	background-size: cover;
 }
 
 #Tianhuo_slim {
 	background: url("assets/Tianhuo slim background.png");
-	background-size: cover;
 }
 
 #Paprika_slim {
 	background: url("assets/Paprika slim background.png");
-	background-size: cover;
 }
 
 #Oleander_slim {
 	background: url("assets/Oleander slim background.png");
-	background-size: cover;
+}
+
+#Velvet_slim {
+	background: url("assets/Velvet slim background.png");
+}
+
+#Arizona_slim {
+	background: url("assets/Arizona slim background.png");
+}
+
+#Pom_slim {
+	background: url("assets/Pom slim background.png");
 }
 
 @keyframes fade-in {
@@ -330,4 +345,29 @@ p {
 	to {transform: translateY(0px);}
 	from {opacity: 0.1;}
 	to {opacity: 1;}
+}
+
+/* TFH modal videos */
+
+#modal_videos_left, #modal_videos_right {
+	position: absolute;
+	width: 768px;
+	height: 432px;
+	z-index: -1;
+}
+
+#modal_videos_left {
+	margin: 15% auto auto 20%;
+}
+
+#modal_videos_right {
+	margin: 15% auto auto 40%;
+}
+
+#modal_videos_left video, #modal_videos_right video {
+	position: absolute;
+	display: none;
+	animation-name: fade-in;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
 }
