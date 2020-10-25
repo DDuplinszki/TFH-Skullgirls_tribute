@@ -17,7 +17,7 @@ body, html {
 	transform-origin: bottom right;
 }
 
-#hidden_fix:hover ~ #skullgirls_logo{
+#skullgirls_logo_anchor:hover ~ #skullgirls_logo{
 	transform: scale(1.5);
 	transform-origin: bottom right;
 	transition: transform 1s;
@@ -51,17 +51,17 @@ body, html {
 	transition-duration: 1s;
 }
 
-#hidden_fix:hover ~ #skullgirls_gradient {
+#skullgirls_logo_anchor:hover ~ #skullgirls_gradient {
 	width: 85%;
 	clip-path: polygon(66% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-#hidden_fix:hover ~ #TFH_gradient {
+#skullgirls_logo_anchor:hover ~ #TFH_gradient {
 	clip-path: polygon(0px 0px, 90% 0px, 14% 100%, 0% 100%);
 	transition-duration: 1s;
 }
 
-/* polygon and gradient setups + hover workaround div */
+/* polygon and gradient setups */
 
 #TFH_gradient {
 	position: absolute;
@@ -87,7 +87,7 @@ body, html {
 	transition: 1s;
 }
 
-#hidden_fix {
+#skullgirls_logo_anchor {
 	position: absolute;
 	height: 345px;
 	width: 600px;
@@ -370,4 +370,55 @@ p {
 	animation-name: fade-in;
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
+}
+
+
+/* Skullgirls.html stylesheet */
+
+#skullgirls_body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+/* CSS grid */
+
+#character_selection {
+	display: grid;
+	grid-column: 1;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#character_selection > * {
+	align-self: center;
+	justify-self: center;
+}
+
+#character_detail {
+	display: grid;
+	grid-column: 2;
+}
+
+.first-row {
+	grid-row-start: 1;
+}
+
+.second-row {
+	grid-row-start: 2;
+}
+
+.third-row {
+	grid-row-start: 3;
+}
+
+.fourth-row {
+	grid-row-start: 4;
+	grid-column-start: 2;
+}
+
+#Valentine {
+	grid-column-start: 3;
 }
