@@ -381,6 +381,7 @@ p {
 	margin: 0;
 	display: grid;
 	grid-template-columns: 1fr 3fr;
+	background: url("assets/Skullgirls/backgrounds/starting background.webp") no-repeat fixed center black;
 }
 
 /* CSS grid */
@@ -393,6 +394,7 @@ p {
 }
 
 #character_selection > * {
+	color: #fffed3;
 	align-self: center;
 	justify-self: center;
 }
@@ -421,4 +423,37 @@ p {
 
 #Valentine {
 	grid-column-start: 3;
+}
+
+/* apparently Robo-Fortune doesn't like grid ¯\_(ツ)_/¯	*/
+#Robo-Fortune {
+	display: grid;
+}
+
+#Robo-Fortune_grid_fix {
+	justify-self: center;
+}
+
+#Peacock_car {
+	position: absolute;
+	bottom: 0;
+	animation: Peacock_start 5s cubic-bezier(.05,.56,.59,.54);
+	display: block;
+}
+
+.icons {
+	position: absolute;
+	bottom: 0;
+	animation: Peacock_start 5s cubic-bezier(.05,.56,.59,.54);
+	visibility: visible;
+}
+
+@keyframes Peacock_start{
+	from {
+		left: -30%;
+	}
+
+	to {
+		left: 100%;
+	}
 }
